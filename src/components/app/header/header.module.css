@@ -1,0 +1,21 @@
+@font-face {
+    font-family:"Work Sans" ;
+    src: url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,600;1,400&display=swap');
+}
+@font-face {
+    font-family: "Roboto";
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Work+Sans:ital,wght@0,600;1,400&display=swap');
+}
+.header{
+    max-width: 1366px;
+    height: 91px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.header-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
