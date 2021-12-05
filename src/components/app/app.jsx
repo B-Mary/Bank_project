@@ -1,23 +1,20 @@
 import React from 'react';
 import Header from './header/header';
-import classes from './app.module.css'
-
+import classes from './app.module.css';
+import Slider from './slider/slider';
 
 const App = () => {
  
   
   return (
-    <div className={classes.all}>
-
-      <div className={classes.wrapp}>
-        <Header />
-      </div>
-      <div >
-        
-      </div>
-      
-    </div>
-    
+    <>
+        <div >
+         <Header />
+        </div>
+        <div className={classes["slider"]}>
+         <Slider />
+       </div>
+    </>
   );
 };
 

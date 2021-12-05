@@ -9,17 +9,21 @@ const Header = () => {
   
   return (
     <div>
-      <div classNam={classes["wrapper-header"]}>
+      <div>
         <div className={classes["header"]}>
-          <div className={classes["header-logo"]}>
-            <Logo />
-            <Navigation />
+          <div className={classes["wrapper"]}>
+            <div className={classes["header-wrapper"]}>
+              <Logo />
+              <Navigation />
+              <Account />
+            </div>
           </div>
-          <Account />
         </div>
       </div>
-      
+       
     </div>
+       
+     
   );
 };
 

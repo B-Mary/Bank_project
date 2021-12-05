@@ -1,13 +1,13 @@
 
-.container-logo{
+ .container-logo{
     display: flex;
     align-items: center;
-    margin-right: 109px;
-}
-.container-logo__img{
-    margin-top: -9px;
-    margin-right: 9px;
     
+}
+
+ .container-logo__img{
+    margin-top: -9px;
+    padding-right: 9px;
 }
 
 .container-logo__text{
@@ -17,4 +17,4 @@
     font-size: 20px;
     line-height: 23px;
     color: #1F1E25;
-}
+}  
