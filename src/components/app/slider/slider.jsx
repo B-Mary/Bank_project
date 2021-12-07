@@ -1,8 +1,8 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination"
-import "swiper/css/navigation"
+import "swiper/swiper.scss";
+import "swiper/components/pagination/pagination.scss"
+// import "swiper/components/navigation/navigation.scss"
 
 import classes from './slider.module.css';
 import blackCard from './black-card.svg'
@@ -11,20 +11,19 @@ import sliderSecond from './slider-2.png'
 import sliderThird from './slider-3.png'
 
 import SwiperCore, {
-    Autoplay,Pagination,Navigation
+    Navigation, Pagination
   } from 'swiper';
+  SwiperCore.use([Navigation, Pagination]);
 
-  SwiperCore.use([Autoplay,Pagination,Navigation]);
+
 
 const Slider = () => {
  
   
     return (
-        <Swiper spaceBetween={30} centeredSlides={true} autoplay={{
-            "delay": 2500,
-            "disableOnInteraction": false
-          }} pagination={{
-            "clickable": true
+        <>
+        <Swiper navigation={true} spaceBetween={30} centeredSlides={true}  pagination={{
+                "clickable": true
           }} navigation={true} className="mySwiper">
     <div className={classes["slider-wrapp"]}>
         <div className={classes["slider-container"]} >
@@ -74,6 +73,7 @@ const Slider = () => {
         </div>
     </div>
     </Swiper>
+    </>
     );
   };
   
