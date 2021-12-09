@@ -2,7 +2,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss"
-// import "swiper/components/navigation/navigation.scss"
+// // import "swiper/components/navigation/navigation.scss"
 
 import classes from './slider.module.css';
 import blackCard from './black-card.svg'
@@ -72,7 +72,7 @@ const Slider = () => {
             </SwiperSlide>
         </div>
     </div>
-    </Swiper>
+     </Swiper> 
     </>
     );
   };
