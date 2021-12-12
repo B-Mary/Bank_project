@@ -8,9 +8,9 @@ const App = () => {
   
   return (
     <>
-        <div >
+        {/* <div > */}
          <Header />
-        </div>
+        {/* </div> */}
         <div className={classes["slider"]}>
          <Slider />
        </div>

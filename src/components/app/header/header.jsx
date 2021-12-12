@@ -8,9 +8,9 @@ import Account from './account';
 const Header = () => {
   
   return (
-    <div>
-      <div>
-        <div className={classes["header"]}>
+    // <div>
+    //   <div>
+        <div className={classes["header"]} id="head">
           <div className={classes["wrapper"]}>
             <div className={classes["header-wrapper"]}>
               <Logo />
@@ -19,9 +19,9 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </div>
+    //   </div>
        
-    </div>
+    // </div>
        
      
   );
