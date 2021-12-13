@@ -1,0 +1,17 @@
+.wrapp{
+    max-width: 1170px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+.list{
+    display: flex;
+    flex-direction: row;
+}
+.list__item{
+    color: #1F1E25;
+    font-family:"Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+}

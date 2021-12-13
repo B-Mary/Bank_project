@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './header/header';
 import classes from './app.module.css';
 import Slider from './slider/slider';
+import Services from './services/services'
 
 const App = () => {
  
@@ -14,6 +15,7 @@ const App = () => {
         <div className={classes["slider"]}>
          <Slider />
        </div>
+       <Services />
     </>
   );
 };
