@@ -34,28 +34,33 @@ const Slider = () => {
 
             </div>
             <div className={classes["slider-second"]}>
+                
                 <div className={classes["second-content"]}>
-                    <img src={sliderSecond} alt="backgraund img"   className={classes["second-content__img"]} />
-                    <h2 className={classes["second-content__header"]}>
-                            Лига Банк
-                    </h2>
-                    <p className={classes["second-content__text"]}>
-                        Ваша уверенность в завтрашнем дне
-                    </p>
+                <img src={sliderSecond} alt="backgraund img"   className={classes["second-content__img"]} />
+                    <div className={classes["container"]}>
+                        <h2 className={classes["second-content__header"]}>
+                                Лига Банк
+                        </h2>
+                        <p className={classes["second-content__text"]}>
+                            Ваша уверенность в завтрашнем дне
+                        </p>
+                    </div>
                 </div>
             </div>
             <div className={classes["slider-third"]}>
                 <div className={classes["third-content"]}>
                     <img src={sliderThird} alt="backgraund img"  className={classes["third-content__img"]} />
-                    <h2 className={classes["third-content__header"]}>
-                        Лига Банк
-                    </h2>
-                    <p className={classes["third-content__text"]}>
-                        Всегда рядом
-                    </p>
-                    <a href="#" className={classes["third-content__button"]}>
-                        Найти отделение
-                    </a>
+                    <div className={classes["container"]}>
+                        <h2 className={classes["third-content__header"]}>
+                            Лига Банк
+                        </h2>
+                        <p className={classes["third-content__text"]}>
+                            Всегда рядом
+                        </p>
+                        <a href="#" className={classes["third-content__button"]}>
+                            Найти отделение
+                        </a>
+                    </div>
                 </div>
             </div>
             </Carousel>
