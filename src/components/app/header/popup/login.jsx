@@ -6,15 +6,7 @@ import pass from './pass.svg'
 
 
 const Login = ({showModal, setShowModal}) => {
-  // const textInput = createRef(null);
-  // function onFocus(){
-  //   debugger
-  //   textInput
-  // }
-  // useEffect(() => {
-
-  //   onFocus()
-  // }, []);
+  
   return (
     <>{ showModal ? 
     <div  className={classes["login-wrapp"]}>

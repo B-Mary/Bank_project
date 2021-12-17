@@ -9,6 +9,9 @@
     margin: 0;
     padding: 0;
 }
+.active{
+    background: #F6F7FF;
+}
 .list-item{
     color: #1F1E25;
     font-family:"Roboto";
@@ -22,7 +25,7 @@
     flex-direction: row;
     width: 293px;
     height: 93px;
-    background: #F6F7FF;
+    
     border-radius: 4px 4px 0px 0px;
 }
 .list-item__text{
