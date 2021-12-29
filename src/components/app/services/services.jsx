@@ -13,9 +13,9 @@ import ServicesContent from './serviceContent'
 
 
 const Services = () => {
-    const [showServices, setShowServices] = useState(dep)
+    const [showServices, setShowServices] = useState("dep")
   const changeServices = (evt) =>{
-      debugger
+      
     setShowServices(evt.currentTarget.id)
     
     
