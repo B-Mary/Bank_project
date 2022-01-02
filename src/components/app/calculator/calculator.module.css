@@ -2,6 +2,7 @@
     max-width: 1170px;
     margin: 0 auto;
     margin-top: 110px;
+    margin-bottom: 110px;
 }
 .calc-wrap__header{  
     color: #1F1E25;
@@ -39,9 +40,17 @@
     color: #1F1E25;
     appearance: none; 
     overflow: hidden;
+    
 } 
  .select{
     position: relative;
+    margin-bottom: 60px;
+}
+#mort{
+    height: 60px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
 }
 .select-one__img{
     position: absolute;
@@ -53,6 +62,14 @@
 }
 
 /* Form */
+.container-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.form{
+    margin: 0;
+}
 .step-two{
     font-family: "Roboto";
     font-style: normal;
@@ -62,5 +79,110 @@
     color: #1F1E25;
     margin: 0;
     margin-top: 40px;
+    margin-bottom: 30px;
+}
+.count-property{
+    font-family:"Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #394959;
+    margin: 0;
+    margin-bottom: 15px;
 }
 
+.container-property{
+    width: 600px;
+    height: 60px;
+    border: 1px solid #1F1E25;
+    box-sizing: border-box;
+    border-radius: 4px;
+    position: relative;
+
+}
+.container-property__rubl{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    color: #1F1E25;
+    position: absolute;
+    top: 14px;
+    right: 200px;
+    margin: 0;
+}
+.container-property__minus{
+    position: absolute;
+    top: 30px;
+    left: 24px
+}
+.container-property__plus{
+    position: absolute;
+    top: 22px;
+    right: 22px;
+}
+
+
+.container-property__input{
+    width: 200px;
+    height: 53px;
+    margin: 0;
+    margin-left: 64px;
+    padding-left: 180px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    color: #1F1E25;
+    border: none;
+}
+.property-min-max{
+    margin: 0;
+    margin-top: 10px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #707C87;
+}
+
+.propose{
+    width:500px ;
+    height: 389px;
+    background: #F6F7FF;
+    border-radius: 4px; 
+    margin-top: -181px;
+}
+
+.propose__button{
+    width: 382px;
+    height: 51px;
+    margin: 0;
+    padding:20px 123px ;
+    background: #2C36F2;
+    border-radius: 4px;
+    color: #F6F7FF;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration: none;
+    margin-left: 58px;
+
+}
+
+/* Application */
+.application{
+    width: 770px;
+    height: 722px;
+    background: #F6F7FF;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 72px;
+
+}

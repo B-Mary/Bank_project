@@ -7,16 +7,22 @@ import minus from './minus.svg'
 
 
 const Calculator = () => {
-    const mortCredit  = "Ипотечное кредитование"
-    const avtoCredit = "Автомобильное кредитование"
-    const none = "Выберите цель кредита"
+    const mortCredit  = "Ипотечное кредитование";
+    const avtoCredit = "Автомобильное кредитование";
+    const none = "Выберите цель кредита";
+    const min = 2000000;
    
 
     const [creditType, setcreditType] = useState("none")
     const cnahgeCredit = (event) =>{
         setcreditType(event.target.value )
     }
-    
+
+    const [showForm, setFormStatus] = useState(false)
+    const viewData = () => {
+        debugger
+        setFormStatus(true);
+    }    
     return (
         <div className={classes["calc-wrap"]}>
             <h2 className={classes["calc-wrap__header"]}>
@@ -29,38 +35,54 @@ const Calculator = () => {
                     <option id='mort'  value={mortCredit}>Ипотечное кредитование </option>
                     <option id='avto'  value={avtoCredit}>Автомобильное кредитование</option>
                 </select>
-                <img src={down} alt="arrow-down"  className={autoBlur={true} ? `${classes["select-one__img"]}` : `${classes["select-one__img"]} ${classes["rotate-arrow"]}`} onChange={cnahgeCredit}/>  
+                <img src={down} alt="arrow-down"  className={classes["select-one__img"]} onChange={cnahgeCredit}/>  
             </div>
             {creditType === "none" ? null :
-                <div className={classes["form"]}>
-                    <div>
-                        <img src={minus} alt="minus img" />
-                        <p className={classes["step-two"]}>Шаг 2. Введите параметры кредита</p>
-                        <label htmlFor="count">Стоимость недвижимости</label><br/>
-                        <input type="number" id='countProperty' />
-                        <img src={plus} alt="plus img" />
-                        <p> От 1 200 000  до 25 000 000 рублей</p>
+            <>
+                <div className={classes["container-form"]}>
+                    <div className={classes["form"]}>
+                        <div>
+                            <p className={classes["step-two"]}>Шаг 2. Введите параметры кредита</p>
+                            <p className={classes["count-property"]}>Стоимость недвижимости</p>
+                            <div className={classes["container-property"]}>
+                                <img src={minus} alt="minus img" className={classes["container-property__minus"]}/>
+                                <input type="number" id='countProperty' value={min}  className={classes["container-property__input"]}/>
+                                <p className={classes["container-property__rubl"]}>рублей</p>
+                                <img src={plus} alt="plus img" className={classes["container-property__plus"]} />
+                            </div>
+                            <p className={classes["property-min-max"]}>От 1 200 000  до 25 000 000 рублей</p>
+                        </div>
+                        <div>
+                            <p>Первоначальный взнос</p>
+                            <input type="number" name="" id="countPayment" />
+                            <input type="range" name="" id="paymentRange" />
+                        </div>
+                        <div>
+                            <p>Срок кредитования</p>
+                            <input type="number" name="" id="term" />
+                            <input type="range" name="" id="termRange" />
+                        </div>
                     </div>
-                    <div>
-                        <p>Первоначальный взнос</p>
-                        <input type="number" name="" id="countPayment" />
-                        <input type="range" name="" id="paymentRange" />
-                    </div>
-                    <div>
-                        <p>Срок кредитования</p>
-                        <input type="number" name="" id="term" />
-                        <input type="range" name="" id="termRange" />
+                    <div className={classes["propose"]}>
+                        <h3 className={classes["propose__header"]}>Наше предложение</h3>
+                        <div className={classes["wrap-propose"]}>
+
+                        </div>
+                        <a href="##" className={classes["propose__button"]} onClick={viewData}>Оформить заявку</a>
                     </div>
                 </div>
-            
+                
+                
+             </>
             }
-    
-            <div className={classes["offer"]}>
+            
+            { showForm ?
+                <div className={classes["application"]} >
 
-            </div>
-            <div className={classes["application"]}>
+                </div> : null
 
-            </div>
+            }
+           
         </div>
     );
 }
