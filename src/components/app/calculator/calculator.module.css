@@ -23,43 +23,37 @@
     margin: 0;
     margin-top: 70px;
 }
+.css-b62m3t-container{
+    border: none;
+}
+.css-1s2u09g-control{
+    border-style: none;
+}
 
-
- .calc-wrap__select{
-    width: 600px;
-    height: 60px;
-    border: 1px solid #1F1E25;
-    box-sizing: border-box;
-    border-radius: 4px;
-    margin: 0;
-    margin-top: 30px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
-    padding-left: 24px;
-    color: #1F1E25;
-    appearance: none; 
-    overflow: hidden;
-    
-} 
  .select{
     position: relative;
     margin-bottom: 60px;
-}
-#mort{
+    z-index: 1;
+    width: 600px;
     height: 60px;
+    font-family: "Roboto";
+    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
+    color: #1F1E25;
+    border: 1px solid #1F1E25;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-top: 30px;
 }
+
 .select-one__img{
     position: absolute;
    bottom: 26px;
    left: 560px;
 } 
-.rotate-arrow{
-    transform: rotate(180deg);
-}
+
 
 /* Form */
 .container-form{
@@ -124,13 +118,12 @@
     right: 22px;
 }
 
-
 .container-property__input{
     width: 200px;
     height: 53px;
     margin: 0;
-    margin-left: 64px;
-    padding-left: 180px;
+    position: absolute;
+    left: 35%;
     font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
@@ -138,6 +131,7 @@
     line-height: 25px;
     color: #1F1E25;
     border: none;
+    
 }
 .property-min-max{
     margin: 0;
@@ -149,7 +143,96 @@
     line-height: 20px;
     color: #707C87;
 }
+.container-payment{
+    position:relative
+}
+.container-payment__header{
+    margin: 0;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #394959;
+    margin-top: 30px;
+}
+.payment-wrap{
+    margin: 0;
+    margin-top: 15px;
+    width: 600px;
+    height: 60px;
+    border: 1px solid #1F1E25;
+    box-sizing: border-box;
+    border-radius: 4px;
+    position: relative;
+}
+.payment-wrap__input{
+    position: absolute;
+    left: 35%;
+    font-family: "Roboto";
+    font-style: normal;
+    border: none;
+    width: 200px;
+    height: 55px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1F1E25;
+}
+.payment-wrap__rubl{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    color: #1F1E25;
+    position: absolute;
+    top: 14px;
+    right: 200px;
+    margin: 0;
+}
+.container-payment__range{
+    margin: 0;
+    margin-top: 22px;
+    width: 600px;
+    height: 0;
+}
+input[type=range]{
+    width: 600px;
+    margin: 0;
+    appearance: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    border: 1px solid #C1C2CA;
+    height: 0;
+    width: 600px;
+}
+input[type=range]::-moz-range-track {
+    border: 1px solid #C1C2CA;
+    height: 0;
+    width: 600px;
+}
 
+input[type=range]::-webkit-slider-thumb {
+    background: #2C36F2;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%
+}
+input[type=range]::-moz-range-thumb {
+    background: #2C36F2;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    margin-bottom: 10px ;
+
+}
+
+
+
+
+
+/* Propose */
 .propose{
     width:500px ;
     height: 389px;
@@ -184,5 +267,16 @@
     border-radius: 4px;
     margin: 0 auto;
     margin-top: 72px;
+    position: relative;
+    z-index: 4;
 
+}
+.application__header{
+    margin: 0;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 31px;
+    color: #1F1E25;
 }
