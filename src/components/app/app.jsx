@@ -17,6 +17,7 @@ const App = () => {
          <Slider />
        </div>
        <Services />
+       {/* <Calculator /> */}
        <Calculator />
     </>
   );
