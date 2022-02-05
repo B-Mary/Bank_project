@@ -6,6 +6,7 @@ import minus from './minus.svg'
 import Offer from './offer'
 
 const Credit = ({creditType, setcreditType}) => {
+    
     const inputRef = useRef();
 
     const mortCredit  = "Ипотечное кредитование";
@@ -25,7 +26,7 @@ const Credit = ({creditType, setcreditType}) => {
         initialStepRange: creditType === mortCredit ? 10 : 5,
         
     }
-
+   
 
     const [creditCost, setCreditCost] = useState( creditData.minPriceValue);
 // Стоимость недвижимости
@@ -37,11 +38,14 @@ const Credit = ({creditType, setcreditType}) => {
              setCreditCost(creditCost - `${creditData.priceValueStep}`)
         }    
     }
+
     function increase (){
-        if((creditCost + `${creditData.priceValueStep}`) > `${creditData.maxPriceText}`){
-            setCreditCost(`${creditData.maxPriceText}`)
+        
+        if((creditCost + creditData.priceValueStep) > creditData.maxPriceText){
+            
+            setCreditCost(creditData.maxPriceText)
         } else{
-            setCreditCost(creditCost + `${creditData.priceValueStep}`)
+            setCreditCost(creditCost + creditData.priceValueStep)
         }
     }
 
@@ -50,13 +54,23 @@ const Credit = ({creditType, setcreditType}) => {
         setCreditCost(evt.target.value)
    }
 // Первоначальный взнос
+const [initialRangeValue, setInitialRangeValue] = useState(creditData.initialRangeStart)
 
-const [initialPaymentValue, setInitialPaymentValue] = useState(creditCost / 10)
+
+
+const [initialPaymentValue, setInitialPaymentValue] = useState(creditCost/10)
+
    const changeValuePayment = (evt)=>{
+
+    setInitialRangeValue(evt.target.value)
+       const costPayment = (evt.target.value * creditData.minPriceValue) / 1000
+       
+    setInitialPaymentValue (costPayment + (creditData.minPriceValue / 10))
+    
    }
 
     return (
-    <>{creditType === chooseCredit ? null :
+    <>{creditType === undefined ? null :
          <div className={classes["container-form"]}>
             <div className={classes["form"]}>
                 <div>
@@ -76,12 +90,12 @@ const [initialPaymentValue, setInitialPaymentValue] = useState(creditCost / 10)
                 <div className={classes["container-payment"]}>
                     <p className={classes["container-payment__header"]}>Первоначальный взнос</p>
                     <div className={classes["payment-wrap"]}>
-                        <input type="number"   ref={inputRef} value={initialPaymentValue}  onChange={changeValuePayment} className={classes["payment-wrap__input"]}/>
+                        <input type="number"    value={initialPaymentValue}   className={classes["payment-wrap__input"]}/>
                         <p className={classes["payment-wrap__rubl"]}>рублей</p>
                     </div>
                     <div className={classes["container-range"]}>
-                        <input type="range" name="range" id="paymentRange" className={classes["slider"]} step={creditCost / 20} ref={inputRef}/>
-                        <label htmlFor="paymentRange" className={classes["container-payment__rangeLabel"]}>10%</label>
+                        <input type="range" name="range" id="paymentRange" value={initialRangeValue}  onChange={changeValuePayment} className={classes["slider"]} step={10}  min={10} />
+                        <label htmlFor="paymentRange" className={classes["container-payment__rangeLabel"]}>{initialRangeValue}%</label>
                     </div>                  
                 </div>
                 <div>

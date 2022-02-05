@@ -46,7 +46,8 @@ const Calculator = () => {
         <Select options={options} onChange={cnahgeCredit}  placeholder="Выберите цель кредита" className={classes["selects"]} styles={style}/>
         <img src={down} alt="arrow-down"  className={classes["select-one__img"]} />  
     </div>
-    <Credit  creditType={creditType} setcreditType={setcreditType}/>
+    {creditType?.value  ? <Credit  creditType={creditType.value} setcreditType={setcreditType}/> : null }
+    
 </div>
     );
 }
