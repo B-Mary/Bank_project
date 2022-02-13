@@ -6,7 +6,7 @@ import minus from './minus.svg'
 import Offer from './offer'
 
 const Credit = ({creditType, setcreditType}) => {
-    
+    debugger
     const inputRef = useRef();
 
     const mortCredit  = "Ипотечное кредитование";
@@ -54,20 +54,14 @@ const Credit = ({creditType, setcreditType}) => {
         setCreditCost(evt.target.value)
    }
 // Первоначальный взнос
-const [initialRangeValue, setInitialRangeValue] = useState(creditData.initialRangeStart)
-
-
-
 const [initialPaymentValue, setInitialPaymentValue] = useState(creditCost/10)
 
-   const changeValuePayment = (evt)=>{
-
+const changeValuePayment = (evt)=>{
     setInitialRangeValue(evt.target.value)
-       const costPayment = (evt.target.value * creditData.minPriceValue) / 1000
-       
-    setInitialPaymentValue (costPayment + (creditData.minPriceValue / 10))
-    
-   }
+    const costPayment = (evt.target.value * creditData.minPriceValue) / 1000
+    setInitialPaymentValue (costPayment + (creditData.minPriceValue / 10))  
+}
+const [initialRangeValue, setInitialRangeValue] = useState(creditData.initialRangeStart)
 
     return (
     <>{creditType === undefined ? null :
@@ -84,8 +78,6 @@ const [initialPaymentValue, setInitialPaymentValue] = useState(creditCost/10)
                         <img src={plus} alt="plus img" onClick={increase} className={classes["container-property__plus"]} />
                     </div>
                     <p className={classes["property-min-max"]}>От {creditData.minPriceText}  до {creditData.maxPriceText}</p>
-                    {/* тут должна біть переменная мин и макисмум, в зависимости от вібора кредита */}
-                   
                 </div>
                 <div className={classes["container-payment"]}>
                     <p className={classes["container-payment__header"]}>Первоначальный взнос</p>
@@ -98,10 +90,20 @@ const [initialPaymentValue, setInitialPaymentValue] = useState(creditCost/10)
                         <label htmlFor="paymentRange" className={classes["container-payment__rangeLabel"]}>{initialRangeValue}%</label>
                     </div>                  
                 </div>
-                <div>
-                    <p>Срок кредитования</p>
-                    <input type="number" name="" id="term" />
-                    <input type="range" name="" id="termRange"  className={classes["slider"]}  min={5}/>
+                <div className={classes["term-wrap"]}>
+                    <p className={classes["term-wrap__header"]}>Срок кредитования</p>
+                    <div className={classes["term-container"]}>
+                        <input type="number" name="" id="term" className={classes["term-container__input"]} />
+                        <p className={classes["term-container__years"]}>лет</p>
+                        <div className={classes["container-range-years"]}>
+                            <input type="range" name="range" id="paymentRange"   className={classes["slider"]} step={1}  min={10} /> 
+                            <div className={classes["time-container"]}>
+                                <p className={classes["time-container__min"]}> лет</p>
+                                <p className={classes["time-container__max"]}> лет</p>
+                            </div>  
+                        </div>
+                        
+                    </div>               
                 </div>
             </div>
             <Offer creditCost={creditCost} creditType={creditType} setcreditType={setcreditType}/>
