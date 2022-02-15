@@ -5,28 +5,9 @@ import plus from './plus.svg'
 import minus from './minus.svg'
 import Offer from './offer'
 
-const Credit = ({creditType, setcreditType}) => {
-    debugger
+const Credit = ({creditData}) => {
     const inputRef = useRef();
-
-    const mortCredit  = "Ипотечное кредитование";
-    const avtoCredit = "Автомобильное кредитование";
-    const chooseCredit = "Выберите цель кредита";
-  
-    
-    const creditData = {
-        title: creditType === mortCredit ? "Ипотечное кредитование" : "Автомобильное кредитование",
-        priceTitle: creditType === mortCredit ? "недвижимости" : "автомобиля",
-        minPriceValue: creditType === mortCredit ? 2000000 : 500000, 
-        priceValueStep: creditType === mortCredit ? 100000 : 50000,
-        minPriceText:  creditType === mortCredit ? 1200000 : 50000,
-        maxPriceText:  creditType === mortCredit ? 25000000 : 5000000,
-        initialRangeStart: creditType === mortCredit ? 10 : 20,
-        initialRangeEnd: 100,
-        initialStepRange: creditType === mortCredit ? 10 : 5,
-        
-    }
-   
+    const maternal_capital = 470000;
 
     const [creditCost, setCreditCost] = useState( creditData.minPriceValue);
 // Стоимость недвижимости
@@ -36,13 +17,11 @@ const Credit = ({creditType, setcreditType}) => {
         } else {
              inputRef.current.value =  creditCost - `${creditData.priceValueStep}`
              setCreditCost(creditCost - `${creditData.priceValueStep}`)
-        }    
+        }
     }
 
     function increase (){
-        
         if((creditCost + creditData.priceValueStep) > creditData.maxPriceText){
-            
             setCreditCost(creditData.maxPriceText)
         } else{
             setCreditCost(creditCost + creditData.priceValueStep)
@@ -59,12 +38,22 @@ const [initialPaymentValue, setInitialPaymentValue] = useState(creditCost/10)
 const changeValuePayment = (evt)=>{
     setInitialRangeValue(evt.target.value)
     const costPayment = (evt.target.value * creditData.minPriceValue) / 1000
-    setInitialPaymentValue (costPayment + (creditData.minPriceValue / 10))  
+    setInitialPaymentValue (costPayment + (creditData.minPriceValue / creditData.initialRangeStart))
 }
 const [initialRangeValue, setInitialRangeValue] = useState(creditData.initialRangeStart)
 
+// Срок кредитования 
+const [creditTermsValue, setCreditTermsValue] = useState(creditData.creditTermsValueRangeMin);
+const changeCreditTerms = (evt) =>{
+    setCreditTermsValue(evt.target.value)
+}
+
+// Чекбокс материнский капитал
+    function useMaternalCapital (evt){
+        evt.target.checked ? setCreditCost(creditCost - maternal_capital) : setCreditCost(creditCost + maternal_capital)
+    }
     return (
-    <>{creditType === undefined ? null :
+    <>{creditData === undefined ? null :
          <div className={classes["container-form"]}>
             <div className={classes["form"]}>
                 <div>
@@ -72,7 +61,7 @@ const [initialRangeValue, setInitialRangeValue] = useState(creditData.initialRan
                     <p className={classes["count-property"]}>Стоимость {creditData.priceTitle}</p>
                     <div className={classes["container-property"]}>
                         <img src={minus} alt="minus img"  onClick={decrease} className={classes["container-property__minus"]}/>
-                        <input type="number" id='countProperty' onChange={changeValueProperty} value={creditCost} 
+                        <input type="number" id='countProperty' onChange={changeValueProperty} value={creditCost}
                             className={classes["container-property__input"]}/>
                         <p className={classes["container-property__rubl"]}>рублей</p>
                         <img src={plus} alt="plus img" onClick={increase} className={classes["container-property__plus"]} />
@@ -86,28 +75,31 @@ const [initialRangeValue, setInitialRangeValue] = useState(creditData.initialRan
                         <p className={classes["payment-wrap__rubl"]}>рублей</p>
                     </div>
                     <div className={classes["container-range"]}>
-                        <input type="range" name="range" id="paymentRange" value={initialRangeValue}  onChange={changeValuePayment} className={classes["slider"]} step={10}  min={10} />
+                        <input type="range" name="range" id="paymentRange" value={initialRangeValue}  onChange={changeValuePayment} className={classes["slider"]} step={creditData.initialStepRange}  min={creditData.initialRangeStart} />
                         <label htmlFor="paymentRange" className={classes["container-payment__rangeLabel"]}>{initialRangeValue}%</label>
-                    </div>                  
+                    </div>
                 </div>
                 <div className={classes["term-wrap"]}>
                     <p className={classes["term-wrap__header"]}>Срок кредитования</p>
                     <div className={classes["term-container"]}>
-                        <input type="number" name="" id="term" className={classes["term-container__input"]} />
+                        <input type="number" name="" id="term" value={creditTermsValue} className={classes["term-container__input"]}  />
                         <p className={classes["term-container__years"]}>лет</p>
                         <div className={classes["container-range-years"]}>
-                            <input type="range" name="range" id="paymentRange"   className={classes["slider"]} step={1}  min={10} /> 
+                            <input type="range" name="range" id="paymentRange"   className={classes["slider"]} step={1}  min={creditData.creditTermsValueRangeMin} onChange={changeCreditTerms}/>
                             <div className={classes["time-container"]}>
-                                <p className={classes["time-container__min"]}> лет</p>
-                                <p className={classes["time-container__max"]}> лет</p>
-                            </div>  
+                                <p className={classes["time-container__min"]}>{creditTermsValue} лет</p>
+                                <p className={classes["time-container__max"]}>{creditData.creditTermsValueRangeMax} лет</p>
+                            </div>
                         </div>
-                        
-                    </div>               
+
+                    </div>
+                </div>
+                <div className={classes["maternal-wrap"]}>
+                    <input type="checkbox" className={classes["maternal-wrap__chekbox"]}/>
+                    <p className={classes["maternal-wrap__text"]}>Использовать материнский капитал</p>
                 </div>
             </div>
-            <Offer creditCost={creditCost} creditType={creditType} setcreditType={setcreditType}/>
-            
+            <Offer />
         </div>
     }
 

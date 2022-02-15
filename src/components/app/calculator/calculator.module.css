@@ -348,3 +348,28 @@
     line-height: 31px;
     color: #1F1E25;
 }
+
+/* maternal capital */
+
+.maternal-wrap{
+    margin-top: 89px;
+    display: flex;
+    flex-direction: row;
+
+}
+.maternal-wrap__chekbox{
+    background: #2C36F2;
+    border-radius: 2px;
+    width: 16px;
+    height: 16px;
+}
+.maternal-wrap__text{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1F1E25;
+    margin: 0;
+    margin-left: 15px;
+}
