@@ -300,54 +300,10 @@
 
 
 
-/* Propose */
-.propose{
-    width:500px ;
-    height: 389px;
-    background: #F6F7FF;
-    border-radius: 4px; 
-    margin-top: -181px;
-}
 
-.propose__button{
-    width: 382px;
-    height: 51px;
-    margin: 0;
-    padding:20px 123px ;
-    background: #2C36F2;
-    border-radius: 4px;
-    color: #F6F7FF;
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
-    text-decoration: none;
-    margin-left: 58px;
 
-}
 
-/* Application */
-.application{
-    width: 770px;
-    height: 722px;
-    background: #F6F7FF;
-    border-radius: 4px;
-    margin: 0 auto;
-    margin-top: 72px;
-    position: relative;
-    z-index: 4;
 
-}
-.application__header{
-    margin: 0;
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 31px;
-    color: #1F1E25;
-}
 
 /* maternal capital */
 
@@ -372,4 +328,96 @@
     color: #1F1E25;
     margin: 0;
     margin-left: 15px;
+}
+
+/* OFFER */
+.offer{
+    background: #F6F7FF;
+    border-radius: 4px;
+    width: 530px;
+    margin-top: -170px;
+    height: 450px;
+}
+.offer__header{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 31px;
+    color: #1F1E25;
+    margin: 0;
+    margin-top: 60px;
+    margin-left: 58px;
+}
+.wrap-offer{
+    margin: 0;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.offer-left{
+    margin-left: 10px;
+}
+.offer-left__amount,
+.offer-right__amount{
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 31px;
+    color: #1F1E25;
+    margin: 0;
+    margin-top: 40px;
+}
+.offer-left__subtitle,
+.offer-right__subtitle{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #394959;
+    margin: 0;
+    margin-top: 15px;
+}
+.offer__button{
+    width: 382px;
+    height: 51px;
+    margin: 0;
+    padding:20px 123px ;
+    background: #2C36F2;
+    border-radius: 4px;
+    color: #F6F7FF;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration: none;
+    margin-left: 58px;
+
+}
+
+
+
+/* Application */
+.application{
+    width: 770px;
+    height: 722px;
+    background: #F6F7FF;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 72px;
+    position: relative;
+    z-index: 4;
+
+}
+.application__header{
+    margin: 0;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 31px;
+    color: #1F1E25;
 }

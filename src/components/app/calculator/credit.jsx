@@ -95,7 +95,7 @@ const changeCreditTerms = (evt) =>{
                     </div>
                 </div>
                 <div className={classes["maternal-wrap"]}>
-                    <input type="checkbox" className={classes["maternal-wrap__chekbox"]}/>
+                    <input type="checkbox" className={classes["maternal-wrap__chekbox"]} onChange={useMaternalCapital}/>
                     <p className={classes["maternal-wrap__text"]}>Использовать материнский капитал</p>
                 </div>
             </div>

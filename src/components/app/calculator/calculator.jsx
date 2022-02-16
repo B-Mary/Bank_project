@@ -30,6 +30,8 @@ function createCreditData (creditType){
     initialStepRange: creditType === mortCredit ? 10 : 5,
     creditTermsValueRangeMin: creditType === mortCredit ? 5 : 1,
     creditTermsValueRangeMax: creditType === mortCredit ? 30 : 5,
+    inerestRateMin: creditType === mortCredit ? 8.5 : 15,
+    interestRate: creditType === mortCredit ? 9.4 : 16
   })
 }
 const data = createCreditData(creditType)
