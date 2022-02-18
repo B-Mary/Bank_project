@@ -31,8 +31,10 @@ function createCreditData (creditType){
     creditTermsValueRangeMin: creditType === mortCredit ? 5 : 1,
     creditTermsValueRangeMax: creditType === mortCredit ? 30 : 5,
     inerestRateMin: creditType === mortCredit ? 8.5 : 15,
-    interestRate: creditType === mortCredit ? 9.4 : 16
-  })
+    interestRate: creditType === mortCredit ? 9.4 : 16,
+    ammountName : creditType === mortCredit ? "Сумма ипотеки" : "Сумма автокредита",
+    subtitleCredit : creditType === mortCredit ? "Ипотека" : "Автомобиль",
+    })
 }
 const data = createCreditData(creditType)
 

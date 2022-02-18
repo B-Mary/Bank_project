@@ -4,12 +4,13 @@ import classes from './calculator.module.css'
 import plus from './plus.svg'
 import minus from './minus.svg'
 import Offer from './offer'
+import ApplicationCredit from './application'
 
 const Credit = ({creditData}) => {
     const inputRef = useRef();
     const maternal_capital = 470000;
 
-    const [creditCost, setCreditCost] = useState( creditData.minPriceValue);
+    const [creditCost, setCreditCost] = useState(creditData.minPriceValue);
 // Стоимость недвижимости
     function decrease(){
         if ((creditCost - `${creditData.priceValueStep}`)< `${creditData.minPriceText}`){
@@ -47,11 +48,24 @@ const [creditTermsValue, setCreditTermsValue] = useState(creditData.creditTermsV
 const changeCreditTerms = (evt) =>{
     setCreditTermsValue(evt.target.value)
 }
+ // процентная ставка в связке со сроком кредитования
+//  const [interestRate, setInterestRate] = useState(creditData.interestRateInit);
+//  function handleInitialFeeChange() {
+//          initialFeeValue < 300000 ? setInterestRate(props.content.interestRateInit) : setInterestRate(props.content.interestRateMin);
+//          setInitialFeeValue(+inputInitialFee.current.value)
+     
+// }
 
 // Чекбокс материнский капитал
     function useMaternalCapital (evt){
         evt.target.checked ? setCreditCost(creditCost - maternal_capital) : setCreditCost(creditCost + maternal_capital)
     }
+
+   
+    
+    // application
+    const [application, setApplication] = useState(false)
+    debugger
     return (
     <>{creditData === undefined ? null :
          <div className={classes["container-form"]}>
@@ -85,7 +99,7 @@ const changeCreditTerms = (evt) =>{
                         <input type="number" name="" id="term" value={creditTermsValue} className={classes["term-container__input"]}  />
                         <p className={classes["term-container__years"]}>лет</p>
                         <div className={classes["container-range-years"]}>
-                            <input type="range" name="range" id="paymentRange"   className={classes["slider"]} step={1}  min={creditData.creditTermsValueRangeMin} onChange={changeCreditTerms}/>
+                            <input type="range" name="range" id="paymentRange" value={creditTermsValue}  className={classes["slider"]} step={1}  min={creditData.creditTermsValueRangeMin} onChange={changeCreditTerms}/>
                             <div className={classes["time-container"]}>
                                 <p className={classes["time-container__min"]}>{creditTermsValue} лет</p>
                                 <p className={classes["time-container__max"]}>{creditData.creditTermsValueRangeMax} лет</p>
@@ -99,12 +113,15 @@ const changeCreditTerms = (evt) =>{
                     <p className={classes["maternal-wrap__text"]}>Использовать материнский капитал</p>
                 </div>
             </div>
-            <Offer />
+            <Offer creditData={creditData} creditCost={creditCost}  setApplication={setApplication}/>
         </div>
+       
     }
-
+   { application && <ApplicationCredit  creditData={creditData} creditCost={creditCost} initialPaymentValue={initialPaymentValue} creditTermsValue={creditTermsValue}/>}
     </>
-
+    
+    
+    
     );
 
 }
