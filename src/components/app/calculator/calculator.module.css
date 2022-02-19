@@ -407,7 +407,7 @@
     background: #F6F7FF;
     margin: 0 auto;
     border-radius: 4px;
-    margin-top: 72px;
+    margin: 70px;
 }
 .apply-wrapp{
     margin-left: 243px;
@@ -419,9 +419,12 @@
     line-height: 31px;
     color: #1F1E25;
 }
+.apply-form{
+    margin-top: 42px;
+    
+}
 
 .apply-wrapp__title{
-
     margin: 0;
     font-family: "Roboto";
     font-style: normal;
@@ -429,4 +432,120 @@
     font-size: 22px;
     line-height: 31px;
     color: #1F1E25;
+}
+
+.apply-form__title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 31px;
+    color: #1F1E25;
+    margin-top: 70px;
+}
+  
+.apply-form__data{
+    width: 630px;
+    margin: 0 auto;
+     display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    height: 55px;
+    border-bottom: 1px solid #C4C4C4;
+}
+  
+.apply-form__data-title{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;  
+    color: #394959;
+}
+  
+.apply-form__data-value{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 31px;  
+    color: #1F1E25;
+}
+.customer-container{
+    width: 630px;
+    margin: 0 auto;
+    position: relative;
+}
+.apply-form__customer{
+    margin-top: 25px;
+    height: 60px;
+    width: 605px;
+    background: #F6F7FF;
+    border: 1px solid #0A1E32;
+    border-radius: 4px;
+    padding-left: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+    color: #707C87;
+}
+  
+.apply-form__contacts {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+  
+.apply-form__contacts-phone {
+    height: 60px;
+    width: 280px;
+    background: #F6F7FF;
+    border: 1px solid #0A1E32;
+    border-radius: 4px;
+    padding-left: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+    color: #707C87;
+}
+  
+.apply-form__contacts-email {
+    height: 60px;
+    width: 280px;
+    background: #F6F7FF;
+    border: 1px solid #0A1E32;
+    border-radius: 4px;
+    padding-left: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+    color: #707C87;
+}
+.customer-button{
+    position: absolute;
+  left: 216px;
+  bottom: -90px;
+  background-color: #2C36F2;
+  border-radius: 4px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+  color: #F6F7FF;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }

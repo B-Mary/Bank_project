@@ -28,7 +28,7 @@ const Offer = ({creditData, creditCost, setApplication}) =>{
                                 <p className={classes["offer-left__subtitle"]}>Ежемесячный платеж</p>
                         </div>
                         <div className={classes["offer-right"]}>
-                                <p className={classes["offer-right__amount"]}> {interestRate} %</p>
+                                <p className={classes["offer-right__amount"]}> {creditData.interestRate} %</p>
                                 <p className={classes["offer-right__subtitle"]}>Процентная ставка</p>
                                 <p className={classes["offer-right__amount"]}>{(creditCost / 40)} рублей</p>
                                 <p className={classes["offer-right__subtitle"]}>Необходимый доход</p>
