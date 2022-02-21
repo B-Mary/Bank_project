@@ -10,8 +10,6 @@ import Credit from './credit'
 const Calculator = () => {
     const mortCredit  = "Ипотечное кредитование";
     const avtoCredit = "Автомобильное кредитование";
-    const chooseCredit = "Выберите цель кредита";
-
 
     const [creditType, setcreditType] = useState("Выберите цель кредита")
     const cnahgeCredit = async (value) =>{
@@ -47,7 +45,6 @@ const data = createCreditData(creditType)
         control: (base, state) => ({
           ...base,
           border: state.isFocused ? 1 : 1,
-          // This line disable the blue border
           boxShadow: state.isFocused ? 0 : 0,
           "&:hover": {
             border: state.isFocused ? 0 : 0
