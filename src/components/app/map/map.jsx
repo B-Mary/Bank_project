@@ -1,14 +1,14 @@
 import React from 'react';
 import classes from './map.module.css'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-
- import 'leaflet/dist/leaflet.css';
- import L from "leaflet";
+import 'leaflet/dist/leaflet.css';
+import L from "leaflet";
+import iUrl from "./location.png"
 
 const position = [56.70, 60.35]
 
 const iconBank = L.icon({
-  iconUrl: '/img/icon/location.svg',
+  iconUrl: {iUrl},
   iconSize: [64, 64],
   iconAnchor: [32, 64],
 })
@@ -25,16 +25,20 @@ function MapRender (){
     return (
         <div className={classes["map-wrapp"]}>
             <h2 className={classes["map-wrapp__title"]}>Отделения Лига Банка</h2>
-            <MapContainer center={position} zoom={5} scrollWheelZoom={false} style={{ height: "462px", width: "100%" }}>
+            <MapContainer center={position} zoom={5} scrollWheelZoom={false} style={{ height: "462px", width: "100%"} }>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <Marker position={position} icon={iconBank}>
+                {markers.map(marker=>(
+                    <Marker position={marker.location} icon={iconBank}>
                     <Popup>
-                    {markers.popupText} <br /> Easily customizable.
+                    {marker.popupText} <br /> Easily customizable.
                     </Popup>
                 </Marker>
+                ))
+                }
+                
             </MapContainer>
         </div>
         
