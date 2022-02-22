@@ -5,6 +5,7 @@ import Slider from './slider/slider';
 import Services from './services/services'
 import Calculator from './calculator/calculator'
 import MapRender from './map/map.jsx'
+import Footer from './footer/footer.jsx'
 
 const App = () => {
  
@@ -18,6 +19,7 @@ const App = () => {
        <Services />
        <Calculator />
        <MapRender />
+       <Footer />
     </>
   );
 };

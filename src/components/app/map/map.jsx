@@ -9,7 +9,7 @@ const position = [56.70, 60.35]
 
 const iconBank = L.icon({
   iconUrl: {iUrl},
-  iconSize: [64, 64],
+  iconSize: [34, 34],
   iconAnchor: [32, 64],
 })
 
