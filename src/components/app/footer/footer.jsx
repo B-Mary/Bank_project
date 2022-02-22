@@ -7,9 +7,13 @@ import FooterMenu from './footerMenu.jsx'
 
 const Footer = () => {
     return (
+
         <div className={classes["footer"]}>
+            <div className={classes["wrapp-footer"]}>
             <LogoFooter />
             <FooterMenu />
+            
+            </div>
             
         </div>
 

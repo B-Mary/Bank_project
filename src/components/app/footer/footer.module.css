@@ -1,0 +1,17 @@
+.footer{
+    background: #F6F7FF;
+}
+.wrapp-footer{
+    width: 1170px;
+    margin: 0 auto;
+    
+    height: 224px;
+}
+.footer-logo__adress{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    color: #707C87;
+}
