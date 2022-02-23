@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import classes from './account.module.css'
-import btn from './btn.svg'
+import btn from '../../../img/btn.svg'
 import Login from './popup/login'
 
 const Account = () => {

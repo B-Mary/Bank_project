@@ -3,10 +3,10 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import classes from './slider.module.css';
-import blackCard from './black-card.svg'
-import whiteCard from './white-card.png'
-import sliderSecond from './slider-2.png'
-import sliderThird from './slider-3.png'
+import blackCard from '../../../img/black-card.svg'
+import whiteCard from '../../../img/white-card.png'
+import sliderSecond from '../../../img/slider-2.png'
+import sliderThird from '../../../img/slider-3.png'
 
 
 const Slider = () => {

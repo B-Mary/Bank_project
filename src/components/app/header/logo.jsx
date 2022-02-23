@@ -1,6 +1,6 @@
  import React from 'react';
  import classes from'./logo.module.css'
- import logo from './logo.svg'
+ import logo from '../../../img/logo.svg'
 
 const Logo = () => {
     return (

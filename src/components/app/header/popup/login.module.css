@@ -5,6 +5,7 @@
     left: 30%;
     background: #F6F7FF;
     border: 4px solid #2C36F2;
+    z-index: 40;
 }
 
 .login-logo{

@@ -3,14 +3,15 @@ import classes from './map.module.css'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 import L from "leaflet";
-import iUrl from "./location.png"
+import iUrl from "../../../img/location.svg"
+
 
 const position = [56.70, 60.35]
 
 const iconBank = L.icon({
-  iconUrl: {iUrl},
-  iconSize: [34, 34],
-  iconAnchor: [32, 64],
+  iconUrl: iUrl,
+  iconSize: [54, 54],
+  iconAnchor: [28, 64],
 })
 
 const markers = [

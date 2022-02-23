@@ -1,12 +1,35 @@
 .footer{
     background: #F6F7FF;
 }
+.footer-logo{
+    padding-top: 49px;
+}
 .wrapp-footer{
     width: 1170px;
     margin: 0 auto;
-    
+    display: flex;
+    flex-direction: row;
     height: 224px;
 }
+
+.container-logo{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    
+}
+.container-logo__text{
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #1F1E25;
+}
+.container-logo__img{
+    margin-top: -9px;
+    padding-right: 9px;
+} 
 .footer-logo__adress{
     font-family: "Roboto";
     font-style: normal;
@@ -14,4 +37,7 @@
     font-size: 12px;
     line-height: 17px;
     color: #707C87;
+    width: 252px;
+    margin: 0;
 }
+

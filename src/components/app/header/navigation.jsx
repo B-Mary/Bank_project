@@ -6,12 +6,12 @@ const Navigation = () => {
       <div className={classes["div-nav"]}>
          <ul className={classes["nav-list"]}>
             <li >
-                 <a href="#" className={classes["nav-list__link"]}>
+                 <a href="#services" className={classes["nav-list__link"]}>
                  Услуги
                  </a>
             </li>
             <li >
-                 <a href="#" className={classes["nav-list__link"]}>
+                 <a href="#calculator" className={classes["nav-list__link"]}>
                  Рассчитать кредит
                  </a>
             </li>
@@ -21,7 +21,7 @@ const Navigation = () => {
                  </a>
             </li>
             <li >
-                 <a href="#" className={classes["nav-list__link"]}>
+                 <a href="#footer" className={classes["nav-list__link"]}>
                  Контакты
                  </a>
             </li>

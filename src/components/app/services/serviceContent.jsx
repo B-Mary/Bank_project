@@ -1,14 +1,10 @@
 import React from 'react';
 import classes from'./services.module.css'
-import pig from './piggybank.png'
-import dep from './depos.svg'
-import cred from './credcards.svg'
-import secur from './security.svg'
-import online from './online.svg'
-import check from './check.svg'
-import car from './car.png'
-import lock from './lock.png'
-import phone from './phone.png'
+import pig from '../../../img/piggybank.png'
+import check from '../../../img/check.svg'
+import car from '../../../img/car.png'
+import lock from '../../../img/lock.png'
+import phone from '../../../img/phone.png'
 
 const ServicesContent =({data})=>{
     return(

@@ -1,14 +1,9 @@
 import React, { useState } from 'react';
 import classes from'./services.module.css'
-import pig from './piggybank.png'
-import dep from './depos.svg'
-import cred from './credcards.svg'
-import secur from './security.svg'
-import online from './online.svg'
-import check from './check.svg'
-import car from './car.png'
-import lock from './lock.png'
-import phone from './phone.png'
+import dep from '../../../img/depos.svg'
+import cred from '../../../img/credcards.svg'
+import secur from '../../../img/security.svg'
+import online from '../../../img/online.svg'
 import ServicesContent from './serviceContent'
 
 
@@ -21,7 +16,7 @@ const Services = () => {
     
   }
     return (
-        <div className={classes["wrapp"]} >
+        <div className={classes["wrapp"]} id="services">
                 <ul className={classes["list"]} >
                     
                     <li className={showServices === 'dep' ? `${classes["list-item"]} ${classes["active"]}` : `${classes["list-item"]}`} id='dep' onClick={changeServices}>

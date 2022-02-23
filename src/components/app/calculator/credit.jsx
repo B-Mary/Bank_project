@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Select from 'react-select';
 import classes from './calculator.module.css'
-import plus from './plus.svg'
-import minus from './minus.svg'
+import plus from '../../../img/plus.svg'
+import minus from '../../../img/minus.svg'
 import Offer from './offer'
 import ApplicationCredit from './application'
 
