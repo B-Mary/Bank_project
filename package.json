@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "author": "Alexey Zubrilin <aozubrilin@gmail.com>",
-  // "homepage": "https://github.com/B-Mary/",
+  
 
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
