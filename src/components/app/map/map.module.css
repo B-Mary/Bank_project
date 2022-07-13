@@ -1,0 +1,13 @@
+.map-wrapp{
+    margin: 0 auto 110px auto;
+    width: 1170px;
+    height: 560px;
+}
+.map-wrapp__title{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 41px;
+    line-height: 57px;
+    color: #1F1E25;
+}

@@ -1,0 +1,33 @@
+@font-face {
+    font-family:"Work Sans" ;
+    src: url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,600;1,400&display=swap');
+}
+@font-face {
+    font-family: "Roboto";
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Work+Sans:ital,wght@0,600;1,400&display=swap');
+}
+.header{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background:  #F6F7FF;;
+}
+.wrapper{
+    max-width: 1170px;
+    margin: 0 auto;
+    
+}
+.header-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 91px;
+    
+}
+.slider{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
